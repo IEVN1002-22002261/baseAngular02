@@ -1,0 +1,51 @@
+
+
+<div class="card">
+  <div class="card-header">
+    <h1>Lista Dragon Ball</h1>
+
+  </div>
+  <div class="class-body">
+    <div class="row">
+      <div class="col-md-4">
+        Filtrar por:
+      </div>
+      <div class="col-md-4">
+        <input [(ngModel)]="listFilter" type="text" class="form-control" placeholder="filtrar heroe">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Filtro: {{listFilter}}</h3>
+      </div>
+    </div>
+    <div class="table-reponsive">
+      <table class="table table-striped" >
+        <thead>
+          <tr>
+
+            <th><button (click)="showImage()" type="button" class="btn btn-primary">{{muestraImg?'Oculta': 'Muestra: '}}Imagen</button></th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Raza</th>
+            <th>Ki</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let heroe of heroes | heroesFilter:listFilter">
+            <td>
+              <img *ngIf="muestraImg" [src]="heroe.imagen" alt="{{heroe.imagen}}" width="50">
+            </td>
+            <td>{{heroe.nombre}}</td>
+            <td>{{heroe.descripcion}}</td>
+            <td>{{heroe.raza}}</td>
+            <td>{{heroe.ki}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

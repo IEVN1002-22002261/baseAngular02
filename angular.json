@@ -21,8 +21,15 @@
       "prefix": "app",
       "architect": {
         "build": {
+<<<<<<< HEAD
           "builder": "@angular/build:application",
           "options": {
+=======
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/base-angular02",
+            "index": "src/index.html",
+>>>>>>> f8b2a75 (Pipes)
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -40,6 +47,10 @@
               "node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": [
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8b2a75 (Pipes)
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
@@ -68,7 +79,11 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+<<<<<<< HEAD
           "builder": "@angular/build:dev-server",
+=======
+          "builder": "@angular-devkit/build-angular:dev-server",
+>>>>>>> f8b2a75 (Pipes)
           "configurations": {
             "production": {
               "buildTarget": "baseAngular02:build:production"
@@ -80,10 +95,17 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
+<<<<<<< HEAD
           "builder": "@angular/build:extract-i18n"
         },
         "test": {
           "builder": "@angular/build:karma",
+=======
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+>>>>>>> f8b2a75 (Pipes)
           "options": {
             "polyfills": [
               "zone.js",
@@ -98,7 +120,12 @@
             ],
             "styles": [
               "src/styles.css"
+<<<<<<< HEAD
             ]
+=======
+            ],
+            "scripts": []
+>>>>>>> f8b2a75 (Pipes)
           }
         }
       }

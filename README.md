@@ -1,6 +1,10 @@
 # BaseAngular02
 
+<<<<<<< HEAD
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
+=======
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.16.
+>>>>>>> f8b2a75 (Pipes)
 
 ## Development server
 
