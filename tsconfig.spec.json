@@ -9,11 +9,7 @@
     ]
   },
   "include": [
-<<<<<<< HEAD
-    "src/**/*.ts"
-=======
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
->>>>>>> f8b2a75 (Pipes)
   ]
 }
