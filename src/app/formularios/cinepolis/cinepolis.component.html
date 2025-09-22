@@ -1,0 +1,78 @@
+<div class="container mt-4">
+  <h2 class="text-center">Cinépolis</h2>
+  <form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-3 mb-3">
+          <h4 class="text-center">Entradas</h4>
+
+          <div class="form-group pt-2">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control" [(ngModel)]="nombre" name="nombre">
+          </div>
+
+          <div class="form-group pt-2">
+            <label for="compradores" class="form-label">Cantidad de Compradores</label>
+            <input type="number" id="compradores" class="form-control" [(ngModel)]="compradores" name="compradores">
+          </div>
+
+          <div class="form-group pt-2">
+            <label class="form-label">¿Tienes Tarjeta Cinépolis?</label><br>
+            <input type="radio" name="tarjeta" [(ngModel)]="tarjetaCine" value="si" id="tarjetaSi">
+            <label for="tarjetaSi" class="me-3">Sí</label>
+
+            <input type="radio" name="tarjeta" [(ngModel)]="tarjetaCine" value="no" id="tarjetaNo">
+            <label for="tarjetaNo">No</label>
+          </div>
+
+          <div class="form-group pt-2">
+            <label for="boletos" class="form-label">Cantidad de Boletos</label>
+            <input type="number" id="boletos" class="form-control" [(ngModel)]="boletos" name="boletos">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card p-3 mb-3">
+          <h4 class="text-center">Salidas</h4>
+
+          <div class="form-group pt-2">
+            <label class="form-label">Costo por Boleto:</label>
+            <p class="form-control-static">$12.00</p>
+          </div>
+
+          <div class="form-group pt-2">
+            <label class="form-label">Total de Boletos Comprados:</label>
+            <p class="form-control-static">{{ boletos }}</p>
+          </div>
+
+          <div class="form-group pt-2">
+            <label class="form-label">Descuento Aplicado:</label>
+            <p class="form-control-static">
+              {{ descuentoAplicado ? (descuentoAplicado * 100) + '%' : 'Sin descuento' }}
+            </p>
+          </div>
+
+          <div class="form-group pt-2">
+            <label class="form-label">Valor Total a Pagar:</label>
+            <p class="form-control-static fw-bold">$ {{ totalPagar | number:'1.2-2' }}</p>
+          </div>
+
+          <div *ngIf="mensajeError" class="alert alert-danger mt-2">
+            {{ mensajeError }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="card p-3 mb-3"> 
+          <h4 class="text-center">Salidas</h4>
+      <div class="col text-center">
+        <button type="button" class="btn btn-success me-3" (click)="procesarCompra()">Procesar</button>
+        <button type="button" class="btn btn-secondary" (click)="salir()">Salir</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
