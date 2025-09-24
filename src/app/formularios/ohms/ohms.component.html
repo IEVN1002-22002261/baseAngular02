@@ -1,0 +1,74 @@
+<div class="container mt-4">
+  <h2 class="text-center">Calculadora de Resistencias</h2>
+
+  <form>
+    <!-- Banda 1 -->
+    <div class="mb-3">
+      <label class="form-label">1ra Banda</label>
+      <select class="form-control" [(ngModel)]="color1" name="color1">
+        <option value="0">Negro</option>
+        <option value="1">Café</option>
+        <option value="2">Rojo</option>
+        <option value="3">Naranja</option>
+        <option value="4">Amarillo</option>
+        <option value="5">Verde</option>
+        <option value="6">Azul</option>
+        <option value="7">Violeta</option>
+        <option value="8">Gris</option>
+        <option value="9">Blanco</option>
+      </select>
+    </div>
+
+    <!-- Banda 2 -->
+    <div class="mb-3">
+      <label class="form-label">2da Banda</label>
+      <select class="form-control" [(ngModel)]="color2" name="color2">
+        <option value="0">Negro</option>
+        <option value="1">Café</option>
+        <option value="2">Rojo</option>
+        <option value="3">Naranja</option>
+        <option value="4">Amarillo</option>
+        <option value="5">Verde</option>
+        <option value="6">Azul</option>
+        <option value="7">Violeta</option>
+        <option value="8">Gris</option>
+        <option value="9">Blanco</option>
+      </select>
+    </div>
+
+    <!-- Multiplicador -->
+    <div class="mb-3">
+      <label class="form-label">Multiplicador</label>
+      <select class="form-control" [(ngModel)]="multiplicador" name="multiplicador">
+        <option value="1">Negro x1</option>
+        <option value="10">Café x10</option>
+        <option value="100">Rojo x100</option>
+        <option value="1000">Naranja x1,000</option>
+        <option value="10000">Amarillo x10,000</option>
+        <option value="100000">Verde x100,000</option>
+        <option value="1000000">Azul x1,000,000</option>
+        <option value="10000000">Violeta x10,000,000</option>
+      </select>
+    </div>
+
+    <!-- Tolerancia -->
+    <div class="mb-3">
+      <label class="form-label">Tolerancia</label>
+      <select class="form-control" [(ngModel)]="tolerancia" name="tolerancia">
+        <option value="0.05">Dorado 5%</option>
+        <option value="0.10">Plata 10%</option>
+      </select>
+    </div>
+
+    <!-- Botón -->
+    <button type="button" class="btn btn-success" (click)="calcular()">Calcular</button>
+
+    <!-- Resultados -->
+    <div class="mt-4 card p-3">
+      <h4>Resultados:</h4>
+      <p>Valor: {{ valor }} Ω</p>
+      <p>Valor Máximo: {{ valorMax }}</p>
+      <p>Valor Mínimo: {{ valorMin }}</p>
+    </div>
+  </form>
+</div>
