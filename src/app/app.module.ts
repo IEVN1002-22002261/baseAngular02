@@ -9,6 +9,7 @@ import { HeroesFilterPipe } from './heroes/heroes-filter.pipe';
 import { OperasBasComponent } from './formularios/operas-bas/operas-bas.component';
 import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component';
 import { OhmsComponent } from './formularios/ohms/ohms.component';
+import { ResistenciasComponent } from './formularios/ohms/resistencias.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,12 @@ import { OhmsComponent } from './formularios/ohms/ohms.component';
     HeroesFilterPipe,
     OperasBasComponent,
     CinepolisComponent,
-    OhmsComponent
+    OhmsComponent,  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

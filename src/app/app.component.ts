@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'baseAngular02';
+ tittle = 'baseANgular02';
 
-  duplicarNumero(numero:number){
-    return numero *2;
+  duplicarNumero(numero: number): number{
+    return numero * 2;
   }
 
-  pelicula={
+  pelicula ={
     titulo: 'Batman',
     anio: new Date(),
     precio: 2500,
-    
   }
+
+  title = signal('baseAngular02');
 }
